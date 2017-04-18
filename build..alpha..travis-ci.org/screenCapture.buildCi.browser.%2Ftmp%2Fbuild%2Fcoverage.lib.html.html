@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-knox/knox/lib/client.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-knox/node_modules/knox/lib/client.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-knox">npmtest-knox (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-knox/knox/lib/client.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-knox/node_modules/knox/lib/client.js</span></h1>
     <h2>
         
         Statements: <span class="metric">14.56% <small>(45 / 309)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-knox/knox/lib/</a> &#187; client.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> » <a href="index.html">node-npmtest-knox/node_modules/knox/lib/</a> » client.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -2056,99 +2054,99 @@ var IPV4_ADDRESS = /^(\d{1,3}\.){3}(\d{1,3})$/;
  * res - The http response if no exception occurred.
  * @api private
  */
-<span class="fstat-no" title="function not covered" >function registerReqListeners(req, fn){</span>
-<span class="cstat-no" title="statement not covered" >  req.on('response', <span class="fstat-no" title="function not covered" >function (res) {</span></span>
-<span class="cstat-no" title="statement not covered" >    fn(null, res);</span>
+<span class="fstat-no" title="function not covered">function registerReqListeners(req, fn){</span>
+<span class="cstat-no" title="statement not covered">  req.on('response', <span class="fstat-no" title="function not covered">function (res) {</span></span>
+<span class="cstat-no" title="statement not covered">    fn(null, res);</span>
   });
-<span class="cstat-no" title="statement not covered" >  req.on('error', fn);</span>
+<span class="cstat-no" title="statement not covered">  req.on('error', fn);</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function ensureLeadingSlash(filename) {</span>
-<span class="cstat-no" title="statement not covered" >  return filename[0] !== '/' ? '/' + filename : filename;</span>
+<span class="fstat-no" title="function not covered">function ensureLeadingSlash(filename) {</span>
+<span class="cstat-no" title="statement not covered">  return filename[0] !== '/' ? '/' + filename : filename;</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function removeLeadingSlash(filename) {</span>
-<span class="cstat-no" title="statement not covered" >  return filename[0] === '/' ? filename.substring(1) : filename;</span>
+<span class="fstat-no" title="function not covered">function removeLeadingSlash(filename) {</span>
+<span class="cstat-no" title="statement not covered">  return filename[0] === '/' ? filename.substring(1) : filename;</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function encodeSpecialCharacters(filename) {</span>
+<span class="fstat-no" title="function not covered">function encodeSpecialCharacters(filename) {</span>
   // Note: these characters are valid in URIs, but S3 does not like them for
   // some reason.
-<span class="cstat-no" title="statement not covered" >  return encodeURI(filename).replace(/[!'()#*+? ]/g, <span class="fstat-no" title="function not covered" >function (char) {</span></span>
-<span class="cstat-no" title="statement not covered" >    return '%' + char.charCodeAt(0).toString(16);</span>
+<span class="cstat-no" title="statement not covered">  return encodeURI(filename).replace(/[!'()#*+? ]/g, <span class="fstat-no" title="function not covered">function (char) {</span></span>
+<span class="cstat-no" title="statement not covered">    return '%' + char.charCodeAt(0).toString(16);</span>
   });
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function getHeader(headers, headerNameLowerCase) {</span>
-<span class="cstat-no" title="statement not covered" >  for (var header in headers) {</span>
-<span class="cstat-no" title="statement not covered" >    if (header.toLowerCase() === headerNameLowerCase) {</span>
-<span class="cstat-no" title="statement not covered" >      return headers[header];</span>
+<span class="fstat-no" title="function not covered">function getHeader(headers, headerNameLowerCase) {</span>
+<span class="cstat-no" title="statement not covered">  for (var header in headers) {</span>
+<span class="cstat-no" title="statement not covered">    if (header.toLowerCase() === headerNameLowerCase) {</span>
+<span class="cstat-no" title="statement not covered">      return headers[header];</span>
     }
   }
-<span class="cstat-no" title="statement not covered" >  return null;</span>
+<span class="cstat-no" title="statement not covered">  return null;</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function isNotDnsCompliant(bucket) {</span>
-<span class="cstat-no" title="statement not covered" >  if (bucket.length &gt; MAX_NON_US_STANDARD_BUCKET_LENGTH) {</span>
-<span class="cstat-no" title="statement not covered" >    return 'is more than ' + MAX_NON_US_STANDARD_BUCKET_LENGTH + ' characters';</span>
+<span class="fstat-no" title="function not covered">function isNotDnsCompliant(bucket) {</span>
+<span class="cstat-no" title="statement not covered">  if (bucket.length &gt; MAX_NON_US_STANDARD_BUCKET_LENGTH) {</span>
+<span class="cstat-no" title="statement not covered">    return 'is more than ' + MAX_NON_US_STANDARD_BUCKET_LENGTH + ' characters';</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (IPV4_ADDRESS.test(bucket)) {</span>
-<span class="cstat-no" title="statement not covered" >    return 'is formatted as an IPv4 address';</span>
+<span class="cstat-no" title="statement not covered">  if (IPV4_ADDRESS.test(bucket)) {</span>
+<span class="cstat-no" title="statement not covered">    return 'is formatted as an IPv4 address';</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var bucketLabels = bucket.split('.');</span>
-<span class="cstat-no" title="statement not covered" >  var bucketLabelsAreValid = bucketLabels.every(<span class="fstat-no" title="function not covered" >function (label) {</span></span>
-<span class="cstat-no" title="statement not covered" >    return BUCKET_LABEL.test(label);</span>
+<span class="cstat-no" title="statement not covered">  var bucketLabels = bucket.split('.');</span>
+<span class="cstat-no" title="statement not covered">  var bucketLabelsAreValid = bucketLabels.every(<span class="fstat-no" title="function not covered">function (label) {</span></span>
+<span class="cstat-no" title="statement not covered">    return BUCKET_LABEL.test(label);</span>
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!bucketLabelsAreValid) {</span>
-<span class="cstat-no" title="statement not covered" >    return 'does not consist of valid period-separated labels';</span>
+<span class="cstat-no" title="statement not covered">  if (!bucketLabelsAreValid) {</span>
+<span class="cstat-no" title="statement not covered">    return 'does not consist of valid period-separated labels';</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return false;</span>
+<span class="cstat-no" title="statement not covered">  return false;</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function isInvalid(bucket) {</span>
-<span class="cstat-no" title="statement not covered" >  if (bucket.length &lt; MIN_BUCKET_LENGTH) {</span>
-<span class="cstat-no" title="statement not covered" >    return 'is less than ' + MIN_BUCKET_LENGTH + ' characters';</span>
+<span class="fstat-no" title="function not covered">function isInvalid(bucket) {</span>
+<span class="cstat-no" title="statement not covered">  if (bucket.length &lt; MIN_BUCKET_LENGTH) {</span>
+<span class="cstat-no" title="statement not covered">    return 'is less than ' + MIN_BUCKET_LENGTH + ' characters';</span>
   }
-<span class="cstat-no" title="statement not covered" >  if (bucket.length &gt; MAX_US_STANDARD_BUCKET_LENGTH) {</span>
-<span class="cstat-no" title="statement not covered" >    return 'is more than ' + MAX_US_STANDARD_BUCKET_LENGTH + ' characters';</span>
-  }
-&nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!US_STANDARD_BUCKET.test(bucket)) {</span>
-<span class="cstat-no" title="statement not covered" >    return 'contains invalid characters';</span>
+<span class="cstat-no" title="statement not covered">  if (bucket.length &gt; MAX_US_STANDARD_BUCKET_LENGTH) {</span>
+<span class="cstat-no" title="statement not covered">    return 'is more than ' + MAX_US_STANDARD_BUCKET_LENGTH + ' characters';</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return false;</span>
+<span class="cstat-no" title="statement not covered">  if (!US_STANDARD_BUCKET.test(bucket)) {</span>
+<span class="cstat-no" title="statement not covered">    return 'contains invalid characters';</span>
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered">  return false;</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function containsPeriod(bucket) {</span>
-<span class="cstat-no" title="statement not covered" >  return bucket.indexOf('.') !== -1;</span>
+<span class="fstat-no" title="function not covered">function containsPeriod(bucket) {</span>
+<span class="cstat-no" title="statement not covered">  return bucket.indexOf('.') !== -1;</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function autoDetermineStyle(options) {</span>
-<span class="cstat-no" title="statement not covered" >  if (!options.style &amp;&amp; options.secure !== false &amp;&amp;</span>
+<span class="fstat-no" title="function not covered">function autoDetermineStyle(options) {</span>
+<span class="cstat-no" title="statement not covered">  if (!options.style &amp;&amp; options.secure !== false &amp;&amp;</span>
       containsPeriod(options.bucket)) {
-<span class="cstat-no" title="statement not covered" >    options.style = 'path';</span>
-<span class="cstat-no" title="statement not covered" >    return;</span>
+<span class="cstat-no" title="statement not covered">    options.style = 'path';</span>
+<span class="cstat-no" title="statement not covered">    return;</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var dnsUncompliance = isNotDnsCompliant(options.bucket);</span>
-<span class="cstat-no" title="statement not covered" >  if (dnsUncompliance) {</span>
-<span class="cstat-no" title="statement not covered" >    if (options.style === 'virtualHosted') {</span>
-<span class="cstat-no" title="statement not covered" >      throw new Error('Cannot use "virtualHosted" style with a ' +</span>
+<span class="cstat-no" title="statement not covered">  var dnsUncompliance = isNotDnsCompliant(options.bucket);</span>
+<span class="cstat-no" title="statement not covered">  if (dnsUncompliance) {</span>
+<span class="cstat-no" title="statement not covered">    if (options.style === 'virtualHosted') {</span>
+<span class="cstat-no" title="statement not covered">      throw new Error('Cannot use "virtualHosted" style with a ' +</span>
                       'DNS-uncompliant bucket name: "' + options.bucket +
                       '" is ' + dnsUncompliance + '.');
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    options.style = 'path';</span>
-<span class="cstat-no" title="statement not covered" >    return;</span>
+<span class="cstat-no" title="statement not covered">    options.style = 'path';</span>
+<span class="cstat-no" title="statement not covered">    return;</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!options.style) {</span>
-<span class="cstat-no" title="statement not covered" >    options.style = 'virtualHosted';</span>
+<span class="cstat-no" title="statement not covered">  if (!options.style) {</span>
+<span class="cstat-no" title="statement not covered">    options.style = 'virtualHosted';</span>
   }
 }
 &nbsp;
@@ -2160,12 +2158,12 @@ var IPV4_ADDRESS = /^(\d{1,3}\.){3}(\d{1,3})$/;
  * @api private
  */
 &nbsp;
-<span class="fstat-no" title="function not covered" >function getCopyHeaders(sourceBucket, sourceFilename, headers) {</span>
-<span class="cstat-no" title="statement not covered" >  sourceFilename = encodeSpecialCharacters(ensureLeadingSlash(sourceFilename));</span>
-<span class="cstat-no" title="statement not covered" >  headers = utils.merge({}, headers || {});</span>
-<span class="cstat-no" title="statement not covered" >  headers['x-amz-copy-source'] = '/' + sourceBucket + sourceFilename;</span>
-<span class="cstat-no" title="statement not covered" >  headers['Content-Length'] = 0; </span>// to avoid Node's automatic chunking if omitted
-<span class="cstat-no" title="statement not covered" >  return headers;</span>
+<span class="fstat-no" title="function not covered">function getCopyHeaders(sourceBucket, sourceFilename, headers) {</span>
+<span class="cstat-no" title="statement not covered">  sourceFilename = encodeSpecialCharacters(ensureLeadingSlash(sourceFilename));</span>
+<span class="cstat-no" title="statement not covered">  headers = utils.merge({}, headers || {});</span>
+<span class="cstat-no" title="statement not covered">  headers['x-amz-copy-source'] = '/' + sourceBucket + sourceFilename;</span>
+<span class="cstat-no" title="statement not covered">  headers['Content-Length'] = 0; </span>// to avoid Node's automatic chunking if omitted
+<span class="cstat-no" title="statement not covered">  return headers;</span>
 }
 &nbsp;
 &nbsp;
@@ -2182,73 +2180,73 @@ var IPV4_ADDRESS = /^(\d{1,3}\.){3}(\d{1,3})$/;
  * @api public
  */
 &nbsp;
-var Client = module.exports = exports = <span class="fstat-no" title="function not covered" >function Client(options) {</span>
-<span class="cstat-no" title="statement not covered" >  if (!options.key) <span class="cstat-no" title="statement not covered" >throw new Error('aws "key" required');</span></span>
-<span class="cstat-no" title="statement not covered" >  if (!options.secret) <span class="cstat-no" title="statement not covered" >throw new Error('aws "secret" required');</span></span>
-<span class="cstat-no" title="statement not covered" >  if (!options.bucket) <span class="cstat-no" title="statement not covered" >throw new Error('aws "bucket" required');</span></span>
+var Client = module.exports = exports = <span class="fstat-no" title="function not covered">function Client(options) {</span>
+<span class="cstat-no" title="statement not covered">  if (!options.key) <span class="cstat-no" title="statement not covered">throw new Error('aws "key" required');</span></span>
+<span class="cstat-no" title="statement not covered">  if (!options.secret) <span class="cstat-no" title="statement not covered">throw new Error('aws "secret" required');</span></span>
+<span class="cstat-no" title="statement not covered">  if (!options.bucket) <span class="cstat-no" title="statement not covered">throw new Error('aws "bucket" required');</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (options.style &amp;&amp; options.style !== 'virtualHosted' &amp;&amp;</span>
+<span class="cstat-no" title="statement not covered">  if (options.style &amp;&amp; options.style !== 'virtualHosted' &amp;&amp;</span>
       options.style !== 'path') {
-<span class="cstat-no" title="statement not covered" >    throw new Error('style must be "virtualHosted" or "path"');</span>
+<span class="cstat-no" title="statement not covered">    throw new Error('style must be "virtualHosted" or "path"');</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (options.port !== undefined &amp;&amp; isNaN(parseInt(options.port))) {</span>
-<span class="cstat-no" title="statement not covered" >    throw new Error('port must be a number.');</span>
+<span class="cstat-no" title="statement not covered">  if (options.port !== undefined &amp;&amp; isNaN(parseInt(options.port))) {</span>
+<span class="cstat-no" title="statement not covered">    throw new Error('port must be a number.');</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var invalidness = isInvalid(options.bucket);</span>
-<span class="cstat-no" title="statement not covered" >  var dnsUncompliance = isNotDnsCompliant(options.bucket);</span>
+<span class="cstat-no" title="statement not covered">  var invalidness = isInvalid(options.bucket);</span>
+<span class="cstat-no" title="statement not covered">  var dnsUncompliance = isNotDnsCompliant(options.bucket);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (invalidness) {</span>
-<span class="cstat-no" title="statement not covered" >    throw new Error('Bucket name "' + options.bucket + '" ' + invalidness + '.');</span>
+<span class="cstat-no" title="statement not covered">  if (invalidness) {</span>
+<span class="cstat-no" title="statement not covered">    throw new Error('Bucket name "' + options.bucket + '" ' + invalidness + '.');</span>
   }
 &nbsp;
   // Save original options, we will need them for Client#copyTo
-<span class="cstat-no" title="statement not covered" >  this.options = utils.merge({}, options);</span>
+<span class="cstat-no" title="statement not covered">  this.options = utils.merge({}, options);</span>
 &nbsp;
   // Make sure we don't override options the user passes in.
-<span class="cstat-no" title="statement not covered" >  options = utils.merge({}, options);</span>
-<span class="cstat-no" title="statement not covered" >  autoDetermineStyle(options);</span>
+<span class="cstat-no" title="statement not covered">  options = utils.merge({}, options);</span>
+<span class="cstat-no" title="statement not covered">  autoDetermineStyle(options);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!options.endpoint) {</span>
-<span class="cstat-no" title="statement not covered" >    if (!options.region || options.region === 'us-standard' || options.region === 'us-east-1') {</span>
-<span class="cstat-no" title="statement not covered" >      options.endpoint = 's3.amazonaws.com';</span>
-<span class="cstat-no" title="statement not covered" >      options.region = 'us-standard';</span>
+<span class="cstat-no" title="statement not covered">  if (!options.endpoint) {</span>
+<span class="cstat-no" title="statement not covered">    if (!options.region || options.region === 'us-standard' || options.region === 'us-east-1') {</span>
+<span class="cstat-no" title="statement not covered">      options.endpoint = 's3.amazonaws.com';</span>
+<span class="cstat-no" title="statement not covered">      options.region = 'us-standard';</span>
     } else {
-<span class="cstat-no" title="statement not covered" >      options.endpoint = 's3-' + options.region + '.amazonaws.com';</span>
+<span class="cstat-no" title="statement not covered">      options.endpoint = 's3-' + options.region + '.amazonaws.com';</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (options.region !== 'us-standard') {</span>
-<span class="cstat-no" title="statement not covered" >      if (dnsUncompliance) {</span>
-<span class="cstat-no" title="statement not covered" >        throw new Error('Outside of the us-standard region, bucket names must' +</span>
+<span class="cstat-no" title="statement not covered">    if (options.region !== 'us-standard') {</span>
+<span class="cstat-no" title="statement not covered">      if (dnsUncompliance) {</span>
+<span class="cstat-no" title="statement not covered">        throw new Error('Outside of the us-standard region, bucket names must' +</span>
                         ' be DNS-compliant. The name "' + options.bucket +
                         '" ' + dnsUncompliance + '.');
       }
     }
   } else {
-<span class="cstat-no" title="statement not covered" >    options.region = undefined;</span>
+<span class="cstat-no" title="statement not covered">    options.region = undefined;</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var portSuffix = 'undefined' == typeof options.port ? "" : ":" + options.port;</span>
-<span class="cstat-no" title="statement not covered" >  this.secure = 'undefined' == typeof options.port;</span>
+<span class="cstat-no" title="statement not covered">  var portSuffix = 'undefined' == typeof options.port ? "" : ":" + options.port;</span>
+<span class="cstat-no" title="statement not covered">  this.secure = 'undefined' == typeof options.port;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (options.style === 'virtualHosted') {</span>
-<span class="cstat-no" title="statement not covered" >    this.host = options.bucket + '.' + options.endpoint;</span>
-<span class="cstat-no" title="statement not covered" >    this.urlBase = options.bucket + '.' + options.endpoint + portSuffix;</span>
+<span class="cstat-no" title="statement not covered">  if (options.style === 'virtualHosted') {</span>
+<span class="cstat-no" title="statement not covered">    this.host = options.bucket + '.' + options.endpoint;</span>
+<span class="cstat-no" title="statement not covered">    this.urlBase = options.bucket + '.' + options.endpoint + portSuffix;</span>
   } else {
-<span class="cstat-no" title="statement not covered" >    this.host = options.endpoint;</span>
-<span class="cstat-no" title="statement not covered" >    this.urlBase = options.endpoint + portSuffix + '/' + options.bucket;</span>
+<span class="cstat-no" title="statement not covered">    this.host = options.endpoint;</span>
+<span class="cstat-no" title="statement not covered">    this.urlBase = options.endpoint + portSuffix + '/' + options.bucket;</span>
   }
 &nbsp;
   // HTTP in Node.js &lt; 0.12 is horribly broken, and leads to lots of "socket
   // hang up" errors: https://github.com/LearnBoost/knox/issues/116. See
   // https://github.com/LearnBoost/knox/issues/116#issuecomment-15045187 and
   // https://github.com/substack/hyperquest#rant
-<span class="cstat-no" title="statement not covered" >  this.agent = false;</span>
+<span class="cstat-no" title="statement not covered">  this.agent = false;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  utils.merge(this, options);</span>
+<span class="cstat-no" title="statement not covered">  utils.merge(this, options);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  this.url = this.secure ? this.https : this.http;</span>
+<span class="cstat-no" title="statement not covered">  this.url = this.secure ? this.https : this.http;</span>
 };
 &nbsp;
 /**
@@ -2261,23 +2259,23 @@ var Client = module.exports = exports = <span class="fstat-no" title="function n
  * @api private
  */
 &nbsp;
-Client.prototype.request = <span class="fstat-no" title="function not covered" >function(method, filename, headers){</span>
-<span class="cstat-no" title="statement not covered" >  var options = { hostname: this.host, agent: this.agent, port: this.port }</span>
+Client.prototype.request = <span class="fstat-no" title="function not covered">function(method, filename, headers){</span>
+<span class="cstat-no" title="statement not covered">  var options = { hostname: this.host, agent: this.agent, port: this.port }</span>
     , date = new Date
     , headers = headers || {}
     , fixedFilename = ensureLeadingSlash(filename);
 &nbsp;
   // Default headers
-<span class="cstat-no" title="statement not covered" >  headers.Date = date.toUTCString()</span>
-<span class="cstat-no" title="statement not covered" >  if (this.style === 'virtualHosted') {</span>
-<span class="cstat-no" title="statement not covered" >    headers.Host = this.host;</span>
+<span class="cstat-no" title="statement not covered">  headers.Date = date.toUTCString()</span>
+<span class="cstat-no" title="statement not covered">  if (this.style === 'virtualHosted') {</span>
+<span class="cstat-no" title="statement not covered">    headers.Host = this.host;</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if ('undefined' != typeof this.token)</span>
-<span class="cstat-no" title="statement not covered" >    headers['x-amz-security-token'] = this.token;</span>
+<span class="cstat-no" title="statement not covered">  if ('undefined' != typeof this.token)</span>
+<span class="cstat-no" title="statement not covered">    headers['x-amz-security-token'] = this.token;</span>
 &nbsp;
   // Authorization header
-<span class="cstat-no" title="statement not covered" >  headers.Authorization = auth.authorization({</span>
+<span class="cstat-no" title="statement not covered">  headers.Authorization = auth.authorization({</span>
       key: this.key
     , secret: this.secret
     , verb: method
@@ -2288,17 +2286,17 @@ Client.prototype.request = <span class="fstat-no" title="function not covered" >
     , amazonHeaders: auth.canonicalizeHeaders(headers)
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var pathPrefix = this.style === 'path' ? '/' + this.bucket : '';</span>
+<span class="cstat-no" title="statement not covered">  var pathPrefix = this.style === 'path' ? '/' + this.bucket : '';</span>
 &nbsp;
   // Issue request
-<span class="cstat-no" title="statement not covered" >  options.method = method;</span>
-<span class="cstat-no" title="statement not covered" >  options.path = pathPrefix + fixedFilename;</span>
-<span class="cstat-no" title="statement not covered" >  options.headers = headers;</span>
-<span class="cstat-no" title="statement not covered" >  var req = (this.secure ? https : http).request(options);</span>
-<span class="cstat-no" title="statement not covered" >  req.url = this.url(filename);</span>
-<span class="cstat-no" title="statement not covered" >  debug('%s %s', method, req.url);</span>
+<span class="cstat-no" title="statement not covered">  options.method = method;</span>
+<span class="cstat-no" title="statement not covered">  options.path = pathPrefix + fixedFilename;</span>
+<span class="cstat-no" title="statement not covered">  options.headers = headers;</span>
+<span class="cstat-no" title="statement not covered">  var req = (this.secure ? https : http).request(options);</span>
+<span class="cstat-no" title="statement not covered">  req.url = this.url(filename);</span>
+<span class="cstat-no" title="statement not covered">  debug('%s %s', method, req.url);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return req;</span>
+<span class="cstat-no" title="statement not covered">  return req;</span>
 };
 &nbsp;
 /**
@@ -2331,9 +2329,9 @@ Client.prototype.request = <span class="fstat-no" title="function not covered" >
  * @api public
  */
 &nbsp;
-Client.prototype.put = <span class="fstat-no" title="function not covered" >function(filename, headers){</span>
-<span class="cstat-no" title="statement not covered" >  headers = utils.merge({}, headers || {});</span>
-<span class="cstat-no" title="statement not covered" >  return this.request('PUT', encodeSpecialCharacters(filename), headers);</span>
+Client.prototype.put = <span class="fstat-no" title="function not covered">function(filename, headers){</span>
+<span class="cstat-no" title="statement not covered">  headers = utils.merge({}, headers || {});</span>
+<span class="cstat-no" title="statement not covered">  return this.request('PUT', encodeSpecialCharacters(filename), headers);</span>
 };
 &nbsp;
 /**
@@ -2357,40 +2355,40 @@ Client.prototype.put = <span class="fstat-no" title="function not covered" >func
  * @api public
  */
 &nbsp;
-Client.prototype.putFile = <span class="fstat-no" title="function not covered" >function(src, filename, headers, fn){</span>
-<span class="cstat-no" title="statement not covered" >  var self = this;</span>
-<span class="cstat-no" title="statement not covered" >  var emitter = new Emitter;</span>
+Client.prototype.putFile = <span class="fstat-no" title="function not covered">function(src, filename, headers, fn){</span>
+<span class="cstat-no" title="statement not covered">  var self = this;</span>
+<span class="cstat-no" title="statement not covered">  var emitter = new Emitter;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if ('function' == typeof headers) {</span>
-<span class="cstat-no" title="statement not covered" >    fn = headers;</span>
-<span class="cstat-no" title="statement not covered" >    headers = {};</span>
+<span class="cstat-no" title="statement not covered">  if ('function' == typeof headers) {</span>
+<span class="cstat-no" title="statement not covered">    fn = headers;</span>
+<span class="cstat-no" title="statement not covered">    headers = {};</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  debug('put %s', src);</span>
-<span class="cstat-no" title="statement not covered" >  fs.stat(src, <span class="fstat-no" title="function not covered" >function (err, stat) {</span></span>
-<span class="cstat-no" title="statement not covered" >    if (err) <span class="cstat-no" title="statement not covered" >return fn(err);</span></span>
+<span class="cstat-no" title="statement not covered">  debug('put %s', src);</span>
+<span class="cstat-no" title="statement not covered">  fs.stat(src, <span class="fstat-no" title="function not covered">function (err, stat) {</span></span>
+<span class="cstat-no" title="statement not covered">    if (err) <span class="cstat-no" title="statement not covered">return fn(err);</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var contentType = mime.lookup(src);</span>
+<span class="cstat-no" title="statement not covered">    var contentType = mime.lookup(src);</span>
 &nbsp;
     // Add charset if it's known.
-<span class="cstat-no" title="statement not covered" >    var charset = mime.charsets.lookup(contentType);</span>
-<span class="cstat-no" title="statement not covered" >    if (charset) {</span>
-<span class="cstat-no" title="statement not covered" >      contentType += '; charset=' + charset;</span>
+<span class="cstat-no" title="statement not covered">    var charset = mime.charsets.lookup(contentType);</span>
+<span class="cstat-no" title="statement not covered">    if (charset) {</span>
+<span class="cstat-no" title="statement not covered">      contentType += '; charset=' + charset;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    headers = utils.merge({</span>
+<span class="cstat-no" title="statement not covered">    headers = utils.merge({</span>
         'Content-Length': stat.size
       , 'Content-Type': contentType
     }, headers);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var stream = fs.createReadStream(src);</span>
+<span class="cstat-no" title="statement not covered">    var stream = fs.createReadStream(src);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var req = self.putStream(stream, filename, headers, fn);</span>
+<span class="cstat-no" title="statement not covered">    var req = self.putStream(stream, filename, headers, fn);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    req.on('progress', emitter.emit.bind(emitter, 'progress'));</span>
+<span class="cstat-no" title="statement not covered">    req.on('progress', emitter.emit.bind(emitter, 'progress'));</span>
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return emitter;</span>
+<span class="cstat-no" title="statement not covered">  return emitter;</span>
 };
 &nbsp;
 /**
@@ -2405,34 +2403,34 @@ Client.prototype.putFile = <span class="fstat-no" title="function not covered" >
  * @api public
  */
 &nbsp;
-Client.prototype.putStream = <span class="fstat-no" title="function not covered" >function(stream, filename, headers, fn){</span>
-<span class="cstat-no" title="statement not covered" >  var contentLength = getHeader(headers, 'content-length');</span>
-<span class="cstat-no" title="statement not covered" >  if (contentLength === null) {</span>
-<span class="cstat-no" title="statement not covered" >    process.nextTick(<span class="fstat-no" title="function not covered" >function () {</span></span>
-<span class="cstat-no" title="statement not covered" >      fn(new Error('You must specify a Content-Length header.'));</span>
+Client.prototype.putStream = <span class="fstat-no" title="function not covered">function(stream, filename, headers, fn){</span>
+<span class="cstat-no" title="statement not covered">  var contentLength = getHeader(headers, 'content-length');</span>
+<span class="cstat-no" title="statement not covered">  if (contentLength === null) {</span>
+<span class="cstat-no" title="statement not covered">    process.nextTick(<span class="fstat-no" title="function not covered">function () {</span></span>
+<span class="cstat-no" title="statement not covered">      fn(new Error('You must specify a Content-Length header.'));</span>
     });
-<span class="cstat-no" title="statement not covered" >    return;</span>
+<span class="cstat-no" title="statement not covered">    return;</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var self = this;</span>
-<span class="cstat-no" title="statement not covered" >  var req = self.put(filename, headers);</span>
+<span class="cstat-no" title="statement not covered">  var self = this;</span>
+<span class="cstat-no" title="statement not covered">  var req = self.put(filename, headers);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  fn = once(fn);</span>
-<span class="cstat-no" title="statement not covered" >  registerReqListeners(req, fn);</span>
-<span class="cstat-no" title="statement not covered" >  stream.on('error', fn);</span>
+<span class="cstat-no" title="statement not covered">  fn = once(fn);</span>
+<span class="cstat-no" title="statement not covered">  registerReqListeners(req, fn);</span>
+<span class="cstat-no" title="statement not covered">  stream.on('error', fn);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var counter = new StreamCounter();</span>
-<span class="cstat-no" title="statement not covered" >  counter.on('progress', <span class="fstat-no" title="function not covered" >function(){</span></span>
-<span class="cstat-no" title="statement not covered" >    req.emit('progress', {</span>
+<span class="cstat-no" title="statement not covered">  var counter = new StreamCounter();</span>
+<span class="cstat-no" title="statement not covered">  counter.on('progress', <span class="fstat-no" title="function not covered">function(){</span></span>
+<span class="cstat-no" title="statement not covered">    req.emit('progress', {</span>
         percent: counter.bytes / contentLength * 100 | 0
       , written: counter.bytes
       , total: contentLength
     });
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  stream.pipe(counter);</span>
-<span class="cstat-no" title="statement not covered" >  stream.pipe(req);</span>
-<span class="cstat-no" title="statement not covered" >  return req;</span>
+<span class="cstat-no" title="statement not covered">  stream.pipe(counter);</span>
+<span class="cstat-no" title="statement not covered">  stream.pipe(req);</span>
+<span class="cstat-no" title="statement not covered">  return req;</span>
 };
 &nbsp;
 /**
@@ -2447,19 +2445,19 @@ Client.prototype.putStream = <span class="fstat-no" title="function not covered"
  * @api public
  */
 &nbsp;
-Client.prototype.putBuffer = <span class="fstat-no" title="function not covered" >function(buffer, filename, headers, fn){</span>
-<span class="cstat-no" title="statement not covered" >  if ('function' == typeof headers) {</span>
-<span class="cstat-no" title="statement not covered" >    fn = headers;</span>
-<span class="cstat-no" title="statement not covered" >    headers = {};</span>
+Client.prototype.putBuffer = <span class="fstat-no" title="function not covered">function(buffer, filename, headers, fn){</span>
+<span class="cstat-no" title="statement not covered">  if ('function' == typeof headers) {</span>
+<span class="cstat-no" title="statement not covered">    fn = headers;</span>
+<span class="cstat-no" title="statement not covered">    headers = {};</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  headers['Content-Length'] = buffer.length;</span>
+<span class="cstat-no" title="statement not covered">  headers['Content-Length'] = buffer.length;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var req = this.put(filename, headers);</span>
-<span class="cstat-no" title="statement not covered" >  fn = once(fn);</span>
-<span class="cstat-no" title="statement not covered" >  registerReqListeners(req, fn);</span>
-<span class="cstat-no" title="statement not covered" >  req.end(buffer);</span>
-<span class="cstat-no" title="statement not covered" >  return req;</span>
+<span class="cstat-no" title="statement not covered">  var req = this.put(filename, headers);</span>
+<span class="cstat-no" title="statement not covered">  fn = once(fn);</span>
+<span class="cstat-no" title="statement not covered">  registerReqListeners(req, fn);</span>
+<span class="cstat-no" title="statement not covered">  req.end(buffer);</span>
+<span class="cstat-no" title="statement not covered">  return req;</span>
 };
 &nbsp;
 /**
@@ -2472,8 +2470,8 @@ Client.prototype.putBuffer = <span class="fstat-no" title="function not covered"
  * @api public
  */
 &nbsp;
-Client.prototype.copy = <span class="fstat-no" title="function not covered" >function(sourceFilename, destFilename, headers){</span>
-<span class="cstat-no" title="statement not covered" >  return this.put(destFilename, getCopyHeaders(this.bucket, sourceFilename, headers));</span>
+Client.prototype.copy = <span class="fstat-no" title="function not covered">function(sourceFilename, destFilename, headers){</span>
+<span class="cstat-no" title="statement not covered">  return this.put(destFilename, getCopyHeaders(this.bucket, sourceFilename, headers));</span>
 };
 &nbsp;
 /**
@@ -2487,17 +2485,17 @@ Client.prototype.copy = <span class="fstat-no" title="function not covered" >fun
  * @api public
  */
 &nbsp;
-Client.prototype.copyFile = <span class="fstat-no" title="function not covered" >function(sourceFilename, destFilename, headers, fn){</span>
-<span class="cstat-no" title="statement not covered" >  if ('function' == typeof headers) {</span>
-<span class="cstat-no" title="statement not covered" >    fn = headers;</span>
-<span class="cstat-no" title="statement not covered" >    headers = {};</span>
+Client.prototype.copyFile = <span class="fstat-no" title="function not covered">function(sourceFilename, destFilename, headers, fn){</span>
+<span class="cstat-no" title="statement not covered">  if ('function' == typeof headers) {</span>
+<span class="cstat-no" title="statement not covered">    fn = headers;</span>
+<span class="cstat-no" title="statement not covered">    headers = {};</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var req = this.copy(sourceFilename, destFilename, headers);</span>
-<span class="cstat-no" title="statement not covered" >  fn = once(fn);</span>
-<span class="cstat-no" title="statement not covered" >  registerReqListeners(req, fn);</span>
-<span class="cstat-no" title="statement not covered" >  req.end();</span>
-<span class="cstat-no" title="statement not covered" >  return req;</span>
+<span class="cstat-no" title="statement not covered">  var req = this.copy(sourceFilename, destFilename, headers);</span>
+<span class="cstat-no" title="statement not covered">  fn = once(fn);</span>
+<span class="cstat-no" title="statement not covered">  registerReqListeners(req, fn);</span>
+<span class="cstat-no" title="statement not covered">  req.end();</span>
+<span class="cstat-no" title="statement not covered">  return req;</span>
 };
 &nbsp;
 /**
@@ -2512,15 +2510,15 @@ Client.prototype.copyFile = <span class="fstat-no" title="function not covered" 
  * @api public
  */
 &nbsp;
-Client.prototype.copyTo = <span class="fstat-no" title="function not covered" >function(sourceFilename, destBucket, destFilename, headers){</span>
-<span class="cstat-no" title="statement not covered" >  var options = utils.merge({}, this.options);</span>
-<span class="cstat-no" title="statement not covered" >  if (typeof destBucket == 'string') {</span>
-<span class="cstat-no" title="statement not covered" >    options.bucket = destBucket;</span>
+Client.prototype.copyTo = <span class="fstat-no" title="function not covered">function(sourceFilename, destBucket, destFilename, headers){</span>
+<span class="cstat-no" title="statement not covered">  var options = utils.merge({}, this.options);</span>
+<span class="cstat-no" title="statement not covered">  if (typeof destBucket == 'string') {</span>
+<span class="cstat-no" title="statement not covered">    options.bucket = destBucket;</span>
   } else {
-<span class="cstat-no" title="statement not covered" >    utils.merge(options, destBucket);</span>
+<span class="cstat-no" title="statement not covered">    utils.merge(options, destBucket);</span>
   }
-<span class="cstat-no" title="statement not covered" >  var client = exports.createClient(options);</span>
-<span class="cstat-no" title="statement not covered" >  return client.put(destFilename, getCopyHeaders(this.bucket, sourceFilename, headers));</span>
+<span class="cstat-no" title="statement not covered">  var client = exports.createClient(options);</span>
+<span class="cstat-no" title="statement not covered">  return client.put(destFilename, getCopyHeaders(this.bucket, sourceFilename, headers));</span>
 };
 &nbsp;
 /**
@@ -2535,17 +2533,17 @@ Client.prototype.copyTo = <span class="fstat-no" title="function not covered" >f
  * @api public
  */
 &nbsp;
-Client.prototype.copyFileTo = <span class="fstat-no" title="function not covered" >function(sourceFilename, destBucket, destFilename, headers, fn){</span>
-<span class="cstat-no" title="statement not covered" >  if ('function' == typeof headers) {</span>
-<span class="cstat-no" title="statement not covered" >    fn = headers;</span>
-<span class="cstat-no" title="statement not covered" >    headers = {};</span>
+Client.prototype.copyFileTo = <span class="fstat-no" title="function not covered">function(sourceFilename, destBucket, destFilename, headers, fn){</span>
+<span class="cstat-no" title="statement not covered">  if ('function' == typeof headers) {</span>
+<span class="cstat-no" title="statement not covered">    fn = headers;</span>
+<span class="cstat-no" title="statement not covered">    headers = {};</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var req = this.copyTo(sourceFilename, destBucket, destFilename, headers);</span>
-<span class="cstat-no" title="statement not covered" >  fn = once(fn);</span>
-<span class="cstat-no" title="statement not covered" >  registerReqListeners(req, fn);</span>
-<span class="cstat-no" title="statement not covered" >  req.end();</span>
-<span class="cstat-no" title="statement not covered" >  return req;</span>
+<span class="cstat-no" title="statement not covered">  var req = this.copyTo(sourceFilename, destBucket, destFilename, headers);</span>
+<span class="cstat-no" title="statement not covered">  fn = once(fn);</span>
+<span class="cstat-no" title="statement not covered">  registerReqListeners(req, fn);</span>
+<span class="cstat-no" title="statement not covered">  req.end();</span>
+<span class="cstat-no" title="statement not covered">  return req;</span>
 };
 &nbsp;
 /**
@@ -2557,8 +2555,8 @@ Client.prototype.copyFileTo = <span class="fstat-no" title="function not covered
  * @api public
  */
 &nbsp;
-Client.prototype.get = <span class="fstat-no" title="function not covered" >function(filename, headers){</span>
-<span class="cstat-no" title="statement not covered" >  return this.request('GET', encodeSpecialCharacters(filename), headers);</span>
+Client.prototype.get = <span class="fstat-no" title="function not covered">function(filename, headers){</span>
+<span class="cstat-no" title="statement not covered">  return this.request('GET', encodeSpecialCharacters(filename), headers);</span>
 };
 &nbsp;
 /**
@@ -2571,16 +2569,16 @@ Client.prototype.get = <span class="fstat-no" title="function not covered" >func
  * @api public
  */
 &nbsp;
-Client.prototype.getFile = <span class="fstat-no" title="function not covered" >function(filename, headers, fn){</span>
-<span class="cstat-no" title="statement not covered" >  if ('function' == typeof headers) {</span>
-<span class="cstat-no" title="statement not covered" >    fn = headers;</span>
-<span class="cstat-no" title="statement not covered" >    headers = {};</span>
+Client.prototype.getFile = <span class="fstat-no" title="function not covered">function(filename, headers, fn){</span>
+<span class="cstat-no" title="statement not covered">  if ('function' == typeof headers) {</span>
+<span class="cstat-no" title="statement not covered">    fn = headers;</span>
+<span class="cstat-no" title="statement not covered">    headers = {};</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var req = this.get(filename, headers);</span>
-<span class="cstat-no" title="statement not covered" >  registerReqListeners(req, fn);</span>
-<span class="cstat-no" title="statement not covered" >  req.end();</span>
-<span class="cstat-no" title="statement not covered" >  return req;</span>
+<span class="cstat-no" title="statement not covered">  var req = this.get(filename, headers);</span>
+<span class="cstat-no" title="statement not covered">  registerReqListeners(req, fn);</span>
+<span class="cstat-no" title="statement not covered">  req.end();</span>
+<span class="cstat-no" title="statement not covered">  return req;</span>
 };
 &nbsp;
 /**
@@ -2592,8 +2590,8 @@ Client.prototype.getFile = <span class="fstat-no" title="function not covered" >
  * @api public
  */
 &nbsp;
-Client.prototype.head = <span class="fstat-no" title="function not covered" >function(filename, headers){</span>
-<span class="cstat-no" title="statement not covered" >  return this.request('HEAD', encodeSpecialCharacters(filename), headers);</span>
+Client.prototype.head = <span class="fstat-no" title="function not covered">function(filename, headers){</span>
+<span class="cstat-no" title="statement not covered">  return this.request('HEAD', encodeSpecialCharacters(filename), headers);</span>
 };
 &nbsp;
 /**
@@ -2606,16 +2604,16 @@ Client.prototype.head = <span class="fstat-no" title="function not covered" >fun
  * @api public
  */
 &nbsp;
-Client.prototype.headFile = <span class="fstat-no" title="function not covered" >function(filename, headers, fn){</span>
-<span class="cstat-no" title="statement not covered" >  if ('function' == typeof headers) {</span>
-<span class="cstat-no" title="statement not covered" >    fn = headers;</span>
-<span class="cstat-no" title="statement not covered" >    headers = {};</span>
+Client.prototype.headFile = <span class="fstat-no" title="function not covered">function(filename, headers, fn){</span>
+<span class="cstat-no" title="statement not covered">  if ('function' == typeof headers) {</span>
+<span class="cstat-no" title="statement not covered">    fn = headers;</span>
+<span class="cstat-no" title="statement not covered">    headers = {};</span>
   }
-<span class="cstat-no" title="statement not covered" >  var req = this.head(filename, headers);</span>
-<span class="cstat-no" title="statement not covered" >  fn = once(fn);</span>
-<span class="cstat-no" title="statement not covered" >  registerReqListeners(req, fn);</span>
-<span class="cstat-no" title="statement not covered" >  req.end();</span>
-<span class="cstat-no" title="statement not covered" >  return req;</span>
+<span class="cstat-no" title="statement not covered">  var req = this.head(filename, headers);</span>
+<span class="cstat-no" title="statement not covered">  fn = once(fn);</span>
+<span class="cstat-no" title="statement not covered">  registerReqListeners(req, fn);</span>
+<span class="cstat-no" title="statement not covered">  req.end();</span>
+<span class="cstat-no" title="statement not covered">  return req;</span>
 };
 &nbsp;
 /**
@@ -2627,8 +2625,8 @@ Client.prototype.headFile = <span class="fstat-no" title="function not covered" 
  * @api public
  */
 &nbsp;
-Client.prototype.del = <span class="fstat-no" title="function not covered" >function(filename, headers){</span>
-<span class="cstat-no" title="statement not covered" >  return this.request('DELETE', encodeSpecialCharacters(filename), headers);</span>
+Client.prototype.del = <span class="fstat-no" title="function not covered">function(filename, headers){</span>
+<span class="cstat-no" title="statement not covered">  return this.request('DELETE', encodeSpecialCharacters(filename), headers);</span>
 };
 &nbsp;
 /**
@@ -2641,33 +2639,33 @@ Client.prototype.del = <span class="fstat-no" title="function not covered" >func
  * @api public
  */
 &nbsp;
-Client.prototype.deleteFile = <span class="fstat-no" title="function not covered" >function(filename, headers, fn){</span>
-<span class="cstat-no" title="statement not covered" >  if ('function' == typeof headers) {</span>
-<span class="cstat-no" title="statement not covered" >    fn = headers;</span>
-<span class="cstat-no" title="statement not covered" >    headers = {};</span>
+Client.prototype.deleteFile = <span class="fstat-no" title="function not covered">function(filename, headers, fn){</span>
+<span class="cstat-no" title="statement not covered">  if ('function' == typeof headers) {</span>
+<span class="cstat-no" title="statement not covered">    fn = headers;</span>
+<span class="cstat-no" title="statement not covered">    headers = {};</span>
   }
-<span class="cstat-no" title="statement not covered" >  var req = this.del(filename, headers);</span>
-<span class="cstat-no" title="statement not covered" >  fn = once(fn);</span>
-<span class="cstat-no" title="statement not covered" >  registerReqListeners(req, fn);</span>
-<span class="cstat-no" title="statement not covered" >  req.end();</span>
-<span class="cstat-no" title="statement not covered" >  return req;</span>
+<span class="cstat-no" title="statement not covered">  var req = this.del(filename, headers);</span>
+<span class="cstat-no" title="statement not covered">  fn = once(fn);</span>
+<span class="cstat-no" title="statement not covered">  registerReqListeners(req, fn);</span>
+<span class="cstat-no" title="statement not covered">  req.end();</span>
+<span class="cstat-no" title="statement not covered">  return req;</span>
 };
 &nbsp;
-<span class="fstat-no" title="function not covered" >function xmlEscape(string) {</span>
-<span class="cstat-no" title="statement not covered" >  return string</span>
+<span class="fstat-no" title="function not covered">function xmlEscape(string) {</span>
+<span class="cstat-no" title="statement not covered">  return string</span>
     .replace(/&amp;/g, '&amp;amp;')
     .replace(/&lt;/g, '&amp;lt;')
     .replace(/&gt;/g, '&amp;gt;')
     .replace(/"/g, '&amp;quot;');
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function makeDeleteXmlBuffer(keys) {</span>
-<span class="cstat-no" title="statement not covered" >    var tags = keys.map(<span class="fstat-no" title="function not covered" >function(key){</span></span>
-<span class="cstat-no" title="statement not covered" >      return '&lt;Object&gt;&lt;Key&gt;' +</span>
+<span class="fstat-no" title="function not covered">function makeDeleteXmlBuffer(keys) {</span>
+<span class="cstat-no" title="statement not covered">    var tags = keys.map(<span class="fstat-no" title="function not covered">function(key){</span></span>
+<span class="cstat-no" title="statement not covered">      return '&lt;Object&gt;&lt;Key&gt;' +</span>
         xmlEscape(removeLeadingSlash(key)) +
         '&lt;/Key&gt;&lt;/Object&gt;';
     });
-<span class="cstat-no" title="statement not covered" >    return new Buffer('&lt;?xml version="1.0" encoding="UTF-8"?&gt;' +</span>
+<span class="cstat-no" title="statement not covered">    return new Buffer('&lt;?xml version="1.0" encoding="UTF-8"?&gt;' +</span>
       '&lt;Delete&gt;' + tags.join('') + '&lt;/Delete&gt;', 'utf8');
 }
 &nbsp;
@@ -2681,27 +2679,27 @@ Client.prototype.deleteFile = <span class="fstat-no" title="function not covered
  * @api public
  */
 &nbsp;
-Client.prototype.deleteMultiple = <span class="fstat-no" title="function not covered" >function(filenames, headers, fn){</span>
-<span class="cstat-no" title="statement not covered" >  if (filenames.length &gt; BUCKET_OPS_MAX) {</span>
-<span class="cstat-no" title="statement not covered" >    throw new Error('Can only delete up to ' + BUCKET_OPS_MAX + ' files ' +</span>
+Client.prototype.deleteMultiple = <span class="fstat-no" title="function not covered">function(filenames, headers, fn){</span>
+<span class="cstat-no" title="statement not covered">  if (filenames.length &gt; BUCKET_OPS_MAX) {</span>
+<span class="cstat-no" title="statement not covered">    throw new Error('Can only delete up to ' + BUCKET_OPS_MAX + ' files ' +</span>
       'at a time. You\'ll need to batch them.');
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if ('function' == typeof headers) {</span>
-<span class="cstat-no" title="statement not covered" >    fn = headers;</span>
-<span class="cstat-no" title="statement not covered" >    headers = {};</span>
+<span class="cstat-no" title="statement not covered">  if ('function' == typeof headers) {</span>
+<span class="cstat-no" title="statement not covered">    fn = headers;</span>
+<span class="cstat-no" title="statement not covered">    headers = {};</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var xml = makeDeleteXmlBuffer(filenames);</span>
+<span class="cstat-no" title="statement not covered">  var xml = makeDeleteXmlBuffer(filenames);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  headers['Content-Length'] = xml.length;</span>
-<span class="cstat-no" title="statement not covered" >  headers['Content-MD5'] = crypto.createHash('md5').update(xml).digest('base64');</span>
+<span class="cstat-no" title="statement not covered">  headers['Content-Length'] = xml.length;</span>
+<span class="cstat-no" title="statement not covered">  headers['Content-MD5'] = crypto.createHash('md5').update(xml).digest('base64');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var req = this.request('POST', '/?delete', headers);</span>
-<span class="cstat-no" title="statement not covered" >  fn = once(fn);</span>
-<span class="cstat-no" title="statement not covered" >  registerReqListeners(req, fn);</span>
-<span class="cstat-no" title="statement not covered" >  req.end(xml);</span>
-<span class="cstat-no" title="statement not covered" >  return req;</span>
+<span class="cstat-no" title="statement not covered">  var req = this.request('POST', '/?delete', headers);</span>
+<span class="cstat-no" title="statement not covered">  fn = once(fn);</span>
+<span class="cstat-no" title="statement not covered">  registerReqListeners(req, fn);</span>
+<span class="cstat-no" title="statement not covered">  req.end(xml);</span>
+<span class="cstat-no" title="statement not covered">  return req;</span>
 };
 &nbsp;
 /**
@@ -2739,28 +2737,28 @@ var RESPONSE_NORMALIZATION = {
  * @type {Object}
  */
 &nbsp;
-<span class="fstat-no" title="function not covered" >function normalizeResponse(data) {</span>
-<span class="cstat-no" title="statement not covered" >  for (var key in data) {</span>
-<span class="cstat-no" title="statement not covered" >    var Constr = RESPONSE_NORMALIZATION[key];</span>
+<span class="fstat-no" title="function not covered">function normalizeResponse(data) {</span>
+<span class="cstat-no" title="statement not covered">  for (var key in data) {</span>
+<span class="cstat-no" title="statement not covered">    var Constr = RESPONSE_NORMALIZATION[key];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (Constr) {</span>
-<span class="cstat-no" title="statement not covered" >      if (Constr === Date) {</span>
-<span class="cstat-no" title="statement not covered" >        data[key] = new Date(data[key]);</span>
-      } else <span class="cstat-no" title="statement not covered" >if (Constr === Array) {</span>
+<span class="cstat-no" title="statement not covered">    if (Constr) {</span>
+<span class="cstat-no" title="statement not covered">      if (Constr === Date) {</span>
+<span class="cstat-no" title="statement not covered">        data[key] = new Date(data[key]);</span>
+      } else <span class="cstat-no" title="statement not covered">if (Constr === Array) {</span>
         // If there's only one element in the array xml2js doesn't know that
         // it should be an array; array-ify it.
-<span class="cstat-no" title="statement not covered" >        if (!Array.isArray(data[key])) {</span>
-<span class="cstat-no" title="statement not covered" >          data[key] = [data[key]];</span>
+<span class="cstat-no" title="statement not covered">        if (!Array.isArray(data[key])) {</span>
+<span class="cstat-no" title="statement not covered">          data[key] = [data[key]];</span>
         }
-      } else <span class="cstat-no" title="statement not covered" >if (Constr === Boolean) {</span>
-<span class="cstat-no" title="statement not covered" >        data[key] = data[key] === 'true';</span>
+      } else <span class="cstat-no" title="statement not covered">if (Constr === Boolean) {</span>
+<span class="cstat-no" title="statement not covered">        data[key] = data[key] === 'true';</span>
       } else {
-<span class="cstat-no" title="statement not covered" >        data[key] = Constr(data[key]);</span>
+<span class="cstat-no" title="statement not covered">        data[key] = Constr(data[key]);</span>
       }
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (Array.isArray(data[key])) {</span>
-<span class="cstat-no" title="statement not covered" >      data[key].forEach(normalizeResponse);</span>
+<span class="cstat-no" title="statement not covered">    if (Array.isArray(data[key])) {</span>
+<span class="cstat-no" title="statement not covered">      data[key].forEach(normalizeResponse);</span>
     }
   }
 }
@@ -2775,53 +2773,53 @@ var RESPONSE_NORMALIZATION = {
  * @api public
  */
 &nbsp;
-Client.prototype.list = <span class="fstat-no" title="function not covered" >function(params, headers, fn){</span>
-<span class="cstat-no" title="statement not covered" >  if ('function' == typeof headers) {</span>
-<span class="cstat-no" title="statement not covered" >    fn = headers;</span>
-<span class="cstat-no" title="statement not covered" >    headers = {};</span>
+Client.prototype.list = <span class="fstat-no" title="function not covered">function(params, headers, fn){</span>
+<span class="cstat-no" title="statement not covered">  if ('function' == typeof headers) {</span>
+<span class="cstat-no" title="statement not covered">    fn = headers;</span>
+<span class="cstat-no" title="statement not covered">    headers = {};</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if ('function' == typeof params) {</span>
-<span class="cstat-no" title="statement not covered" >    fn = params;</span>
-<span class="cstat-no" title="statement not covered" >    params = null;</span>
+<span class="cstat-no" title="statement not covered">  if ('function' == typeof params) {</span>
+<span class="cstat-no" title="statement not covered">    fn = params;</span>
+<span class="cstat-no" title="statement not covered">    params = null;</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (params &amp;&amp; !LIST_PARAMS[Object.keys(params)[0]]) {</span>
-<span class="cstat-no" title="statement not covered" >    headers = params;</span>
-<span class="cstat-no" title="statement not covered" >    params = null;</span>
+<span class="cstat-no" title="statement not covered">  if (params &amp;&amp; !LIST_PARAMS[Object.keys(params)[0]]) {</span>
+<span class="cstat-no" title="statement not covered">    headers = params;</span>
+<span class="cstat-no" title="statement not covered">    params = null;</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var url = params ? '?' + qs.stringify(params) : '';</span>
-<span class="cstat-no" title="statement not covered" >  var req = this.request('GET', url, headers);</span>
-<span class="cstat-no" title="statement not covered" >  registerReqListeners(req, <span class="fstat-no" title="function not covered" >function(err, res){</span></span>
-<span class="cstat-no" title="statement not covered" >    if (err) <span class="cstat-no" title="statement not covered" >return fn(err);</span></span>
+<span class="cstat-no" title="statement not covered">  var url = params ? '?' + qs.stringify(params) : '';</span>
+<span class="cstat-no" title="statement not covered">  var req = this.request('GET', url, headers);</span>
+<span class="cstat-no" title="statement not covered">  registerReqListeners(req, <span class="fstat-no" title="function not covered">function(err, res){</span></span>
+<span class="cstat-no" title="statement not covered">    if (err) <span class="cstat-no" title="statement not covered">return fn(err);</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var xmlStr = '';</span>
+<span class="cstat-no" title="statement not covered">    var xmlStr = '';</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    res.on('data', <span class="fstat-no" title="function not covered" >function(chunk){</span></span>
-<span class="cstat-no" title="statement not covered" >      xmlStr += chunk;</span>
+<span class="cstat-no" title="statement not covered">    res.on('data', <span class="fstat-no" title="function not covered">function(chunk){</span></span>
+<span class="cstat-no" title="statement not covered">      xmlStr += chunk;</span>
     });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    res.on('end', <span class="fstat-no" title="function not covered" >function(){</span></span>
-<span class="cstat-no" title="statement not covered" >      new xml2js.Parser({explicitArray: false, explicitRoot: false})</span>
-        .parseString(xmlStr, <span class="fstat-no" title="function not covered" >function(err, data){</span>
-<span class="cstat-no" title="statement not covered" >          if (err) <span class="cstat-no" title="statement not covered" >return fn(err);</span></span>
-<span class="cstat-no" title="statement not covered" >          if (data == null) <span class="cstat-no" title="statement not covered" >return fn(new Error('null response received'));</span></span>
+<span class="cstat-no" title="statement not covered">    res.on('end', <span class="fstat-no" title="function not covered">function(){</span></span>
+<span class="cstat-no" title="statement not covered">      new xml2js.Parser({explicitArray: false, explicitRoot: false})</span>
+        .parseString(xmlStr, <span class="fstat-no" title="function not covered">function(err, data){</span>
+<span class="cstat-no" title="statement not covered">          if (err) <span class="cstat-no" title="statement not covered">return fn(err);</span></span>
+<span class="cstat-no" title="statement not covered">          if (data == null) <span class="cstat-no" title="statement not covered">return fn(new Error('null response received'));</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >          delete data.$;</span>
-<span class="cstat-no" title="statement not covered" >          normalizeResponse(data);</span>
+<span class="cstat-no" title="statement not covered">          delete data.$;</span>
+<span class="cstat-no" title="statement not covered">          normalizeResponse(data);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >          if (!('Contents' in data)) {</span>
-<span class="cstat-no" title="statement not covered" >            data.Contents = [];</span>
+<span class="cstat-no" title="statement not covered">          if (!('Contents' in data)) {</span>
+<span class="cstat-no" title="statement not covered">            data.Contents = [];</span>
           }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >          fn(null, data);</span>
+<span class="cstat-no" title="statement not covered">          fn(null, data);</span>
         });
     });
   });
-<span class="cstat-no" title="statement not covered" >  req.on('error', fn);</span>
-<span class="cstat-no" title="statement not covered" >  req.end();</span>
-<span class="cstat-no" title="statement not covered" >  return req;</span>
+<span class="cstat-no" title="statement not covered">  req.on('error', fn);</span>
+<span class="cstat-no" title="statement not covered">  req.end();</span>
+<span class="cstat-no" title="statement not covered">  return req;</span>
 };
 &nbsp;
 /**
@@ -2832,10 +2830,10 @@ Client.prototype.list = <span class="fstat-no" title="function not covered" >fun
  * @api public
  */
 &nbsp;
-Client.prototype.http = <span class="fstat-no" title="function not covered" >function(filename){</span>
-<span class="cstat-no" title="statement not covered" >  filename = encodeSpecialCharacters(ensureLeadingSlash(filename));</span>
+Client.prototype.http = <span class="fstat-no" title="function not covered">function(filename){</span>
+<span class="cstat-no" title="statement not covered">  filename = encodeSpecialCharacters(ensureLeadingSlash(filename));</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return 'http://' + this.urlBase + filename;</span>
+<span class="cstat-no" title="statement not covered">  return 'http://' + this.urlBase + filename;</span>
 };
 &nbsp;
 /**
@@ -2846,10 +2844,10 @@ Client.prototype.http = <span class="fstat-no" title="function not covered" >fun
  * @api public
  */
 &nbsp;
-Client.prototype.https = <span class="fstat-no" title="function not covered" >function(filename){</span>
-<span class="cstat-no" title="statement not covered" >  filename = encodeSpecialCharacters(ensureLeadingSlash(filename));</span>
+Client.prototype.https = <span class="fstat-no" title="function not covered">function(filename){</span>
+<span class="cstat-no" title="statement not covered">  filename = encodeSpecialCharacters(ensureLeadingSlash(filename));</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return 'https://' + this.urlBase + filename;</span>
+<span class="cstat-no" title="statement not covered">  return 'https://' + this.urlBase + filename;</span>
 };
 &nbsp;
 /**
@@ -2862,16 +2860,16 @@ Client.prototype.https = <span class="fstat-no" title="function not covered" >fu
  * @api public
  */
 &nbsp;
-Client.prototype.signedUrl = <span class="fstat-no" title="function not covered" >function(filename, expiration, options){</span>
-<span class="cstat-no" title="statement not covered" >  var epoch = Math.floor(expiration.getTime()/1000)</span>
+Client.prototype.signedUrl = <span class="fstat-no" title="function not covered">function(filename, expiration, options){</span>
+<span class="cstat-no" title="statement not covered">  var epoch = Math.floor(expiration.getTime()/1000)</span>
     , pathname = url.parse(filename).pathname
     , resource = '/' + this.bucket + ensureLeadingSlash(pathname);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (options &amp;&amp; options.qs) {</span>
-<span class="cstat-no" title="statement not covered" >    resource += '?' + decodeURIComponent(qs.stringify(options.qs));</span>
+<span class="cstat-no" title="statement not covered">  if (options &amp;&amp; options.qs) {</span>
+<span class="cstat-no" title="statement not covered">    resource += '?' + decodeURIComponent(qs.stringify(options.qs));</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var signature = auth.signQuery({</span>
+<span class="cstat-no" title="statement not covered">  var signature = auth.signQuery({</span>
       secret: this.secret
     , date: epoch
     , resource: resource
@@ -2881,16 +2879,16 @@ Client.prototype.signedUrl = <span class="fstat-no" title="function not covered"
     , token: this.token
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var queryString = qs.stringify(utils.merge({</span>
+<span class="cstat-no" title="statement not covered">  var queryString = qs.stringify(utils.merge({</span>
     Expires: epoch,
     AWSAccessKeyId: this.key,
     Signature: signature
   }, (options &amp;&amp; options.qs) || {}));
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (typeof this.token !== 'undefined')</span>
-<span class="cstat-no" title="statement not covered" >      queryString += '&amp;x-amz-security-token=' + encodeURIComponent(this.token);</span>
+<span class="cstat-no" title="statement not covered">  if (typeof this.token !== 'undefined')</span>
+<span class="cstat-no" title="statement not covered">      queryString += '&amp;x-amz-security-token=' + encodeURIComponent(this.token);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return this.url(filename) + '?' + queryString;</span>
+<span class="cstat-no" title="statement not covered">  return this.url(filename) + '?' + queryString;</span>
 };
 &nbsp;
 /**
@@ -2901,15 +2899,16 @@ Client.prototype.signedUrl = <span class="fstat-no" title="function not covered"
  * @api public
  */
 &nbsp;
-exports.createClient = <span class="fstat-no" title="function not covered" >function(options){</span>
-<span class="cstat-no" title="statement not covered" >  return new Client(options);</span>
+exports.createClient = <span class="fstat-no" title="function not covered">function(options){</span>
+<span class="cstat-no" title="statement not covered">  return new Client(options);</span>
 };
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 15:19:50 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 18 2017 17:12:23 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
