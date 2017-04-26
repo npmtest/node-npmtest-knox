@@ -1,6 +1,6 @@
 # npmtest-knox
 
-#### test coverage for  [knox (v0.9.2)](https://github.com/LearnBoost/knox)  [![npm package](https://img.shields.io/npm/v/npmtest-knox.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-knox) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-knox.svg)](https://travis-ci.org/npmtest/node-npmtest-knox)
+#### basic test coverage for  [knox (v0.9.2)](https://github.com/LearnBoost/knox)  [![npm package](https://img.shields.io/npm/v/npmtest-knox.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-knox) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-knox.svg)](https://travis-ci.org/npmtest/node-npmtest-knox)
 
 #### Amazon S3 client
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-knox/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-knox/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-knox/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-knox/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-knox/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-knox/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-knox/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-knox/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-knox/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-knox/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-knox/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-knox/build/coverage.html/index.html)
 
@@ -99,7 +99,8 @@
     "scripts": {
         "test": "mocha"
     },
-    "version": "0.9.2"
+    "version": "0.9.2",
+    "bin": {}
 }
 ```
 
